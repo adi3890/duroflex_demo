@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Duroflex Demo</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+		function update(){
+			qntum = parseFloat(jQuery('.selectqlty').val())
+			length = parseFloat(jQuery('.selectlength').val())
+			breadth = parseFloat(jQuery('.selectbreadth').val())
+			mrp = qntum * length * breadth;
+			if(mrp > 0){
+				jQuery('.mrp').html('Rs. '+Math.ceil(mrp)+'/-');
+			} else {
+				jQuery('.mrp').html('');
+			}
+			
+		}
+
+		jQuery("document").ready(function(){
+			jQuery('.selectqlty, .selectlength, .selectbreadth').change(function(){
+				update();
+			})
+		})
+	</script>
+	<style type="text/css">
+		.selectqlty{
+			width: 98%
+			margin:0 auto;
+			text-align: center;
+		}
+
+		.mrp{
+			color: red;
+			font-size: 36px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<select class="selectqlty">
+		<option value="0">Select Matress</option>
+		<option value="1.707947531">Soft support 1 star 4"</option>
+		<option value="1.814429012">Comfy 4"</option>
+		<option value="2.8179012346">Duroflex 4"</option>
+		<option value="3.0374228395">Duroflex 5"</option>
+		<option value="3.6477623457">Premium Ortho 4.5"</option>
+		<option value="4.668595679">Neo 6"</option>
+		<option value="4.9791666667">Dual Sleep 5"</option>
+		<option value="5.0802469136">Premium Ortho 6"</option>
+		<option value="5.2384259259">Crown Lush 6"</option>
+		<option value="5.9394290123">Crown Lush 8"</option>
+		<option value="5.975308642">Dual Sleep 6"</option>
+		<option value="7.1585648148">Spine Rest 5"</option>
+	</select>
+	</br></br>
+	<select class="selectlength">
+		<option value="0">L</option>
+		<option value="72">72</option>
+		<option value="75">75</option>
+		<option value="78">78</option>
+	</select>
+	X
+	<select class="selectbreadth">
+		<option value="0">B</option>
+		<option value="30">30</option>
+		<option value="36">36</option>
+		<option value="48">48</option>
+		<option value="60">60</option>
+		<option value="66">66</option>
+		<option value="72">72</option>
+	</select>
+	<div class="mrp"></div>
+</body>
+</html>
