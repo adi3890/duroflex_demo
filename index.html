@@ -24,20 +24,35 @@
 		})
 	</script>
 	<style type="text/css">
-		.selectqlty{
-			width: 98%
-			margin:0 auto;
+		body{
+			color: orangered;
+		}
+		select{
+    		height: 30px;
+    		font-size: 20px;
+    		color: orangered;
+    		text-align: center;
+    		background: white;
+    		border: 2px solid orangered;
+    		border-radius: 5px;
+
+		}
+
+		.container{
+			margin: 0 auto;
 			text-align: center;
 		}
 
 		.mrp{
-			color: red;
-			font-size: 36px;
+			color: orangered;
+			font-size: 50px;
 			font-weight: bold;
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
+	<div class="container">
 	<select class="selectqlty">
 		<option value="0">Select Matress</option>
 		<option value="1.707947531">Soft support 1 star 4"</option>
@@ -70,6 +85,9 @@
 		<option value="66">66</option>
 		<option value="72">72</option>
 	</select>
+	</div>
+	</br>
+
 	<div class="mrp"></div>
 </body>
 </html>
