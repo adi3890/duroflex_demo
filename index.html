@@ -8,7 +8,7 @@
 			qntum = parseFloat(jQuery('.selectqlty').val())
 			length = parseFloat(jQuery('.selectlength').val())
 			breadth = parseFloat(jQuery('.selectbreadth').val())
-			mrp = qntum * length * breadth;
+			mrp = 2 * qntum * length * breadth;
 			if(mrp > 0){
 				jQuery('.mrp').html('Rs. '+Math.ceil(mrp)+'/-');
 			} else {
